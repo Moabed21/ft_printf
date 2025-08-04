@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include <stdlib.h>
+
 int	ft_strlen(char *str)
 {
 	int	i;
@@ -33,17 +34,16 @@ void	ft_strcpy(char *dest, char *src)
 		i++;
 	}
 	dest[i] = '\0';
-	//return (dest);
 }
 
 char	*ft_strdup(char *src)
 {
 	char	*dest;
 	int		length;
-	
+
 	length = ft_strlen(src);
 	dest = malloc(sizeof(char) * length);
-	ft_strcpy (dest,src);
+	ft_strcpy (dest, src);
 	return (dest);
 }
 /*
