@@ -1,48 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/22 19:26:51 by moabed            #+#    #+#             */
-/*   Updated: 2025/06/22 19:26:54 by moabed           ###   ########.fr       */
+/*   Created: 2025/06/26 20:52:14 by moabed            #+#    #+#             */
+/*   Updated: 2025/06/26 20:52:17 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stddef.h>
 
-int	ft_str_is_printable(char *str)
+void	*ft_memset(void* s, int c, size_t n)
 {
-	int	i;
-	int	j;
+	int i;
+    i = 0;
 
-	j = 0;
-	i = 0;
-	if (str[j] == '\0')
-	{
-		return (1);
-	}
-	else
-	{
-		while (str[j] != '\0')
-		{
-			if (str[j] < 127 && str[j] >= 32)
-				i = 1;
-			else
-			{
-				i = 0;
-				break ;
-			}
-			j++;
-		}
-		return (i);
-	}
+    while()
+    {
+        
+    }
 }
-/*
-int main(void){
-
-char test[]= "Zf09";
-int i= ft_str_is_printable(test);
-char x;
-x = i+ '0';
-write(1,&x,1);
-}*/

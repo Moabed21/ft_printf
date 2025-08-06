@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_strupcase.c                              :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/22 19:36:01 by moabed            #+#    #+#             */
-/*   Updated: 2025/06/22 19:36:04 by moabed           ###   ########.fr       */
+/*   Created: 2025/06/22 19:58:58 by moabed            #+#    #+#             */
+/*   Updated: 2025/06/22 19:58:59 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strupcase(char *str)
+int	ft_tolower(int x)
 {
-	int	j;
-
-	j = 0;
-	while (str[j] != '\0')
-	{
-		if (str[j] >= 'a' && str[j] <= 'z')
-		{
-			str[j] = str[j] - 32;
-		}
-		j++;
-	}
-	return (str);
+	if(x >= 65 && x <= 90)
+		return (x + 32);
+	else
+		return (x);
 }
 /*
 int main(void){
 
 char test[5]= "Zf09\0";
-char *i= ft_strupcase(test);
+int i= ft_strlowcase(test);
 char x;
 x = i+ '0';
 write(1,&x,1);

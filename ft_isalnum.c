@@ -10,23 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(char x)
+int	ft_isalpha(int x)
 {
-	if (!(x >= 'a' && x <= 'z') || (x >= 'A' && x <= 'Z'))
+	if (!(x >= 97 && x <= 122) || (x >= 65 && x <= 90))
 		return (0);
 	else
 		return (1);
 }
 
-int	ft_isdigit(char x)
+int	ft_isdigit(int x)
 {
-	if (x >= '0' && x <= '9')
+	if (x >= 48 && x <= 57)
 		return (1);
 	else
 		return (0);
 }
 
-int	ft_isalnum(char x)
+int	ft_isalnum(int x)
 {
 	if (ft_isdigit(x) || ft_isalpha(x))
 		return (1);

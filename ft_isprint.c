@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/04 11:49:43 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/04 11:50:50 by moabed           ###   ########.fr       */
+/*   Created: 2025/06/22 19:26:51 by moabed            #+#    #+#             */
+/*   Updated: 2025/06/22 19:26:54 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isascii(int x)
+int	ft_isprint(int x)
 {
-	if (x >= 0 && x <= 255)
-	{
-		return (1);
-	}
+	if (x < 127 && x >= 32)
+		i = 1;
 	else
 	{
-		return (0);
+		i = 0;
+		break ;
 	}
-}
+		return (i);
+	}
+/*
+int main(void){
+
+char test[]= "Zf09";
+int i= ft_str_is_printable(test);
+char x;
+x = i+ '0';
+write(1,&x,1);
+}*/

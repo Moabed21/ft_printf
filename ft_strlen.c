@@ -9,8 +9,9 @@
 /*   Updated: 2025/06/26 20:52:17 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <stddef.h>
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 
