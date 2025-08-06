@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/26 20:52:14 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/06 17:22:22 by moabed           ###   ########.fr       */
+/*   Created: 2025/08/06 15:23:21 by moabed            #+#    #+#             */
+/*   Updated: 2025/08/06 17:19:21 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,29 +27,24 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (p);
 }
 
-void    *ft_memcpy(void *dest,const void *src )
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char *dest1;
-	unsigned char *src1;
-
-	dest1 = (unsigned char *)dest;
-	src1 = (unsigned char *)src;
-
-	while(*src1)
+        while(n)
 	{
-                ft_memset(dest1,*src1,sizeof(*src));
-                src1++;
-                dest1++;
+                ft_memset((unsigned char *)dest,*(unsigned char *)src,sizeof(*(unsigned char *)src));
+                src++;
+                dest++;
+                n--;
 	}
-        return (dest1);
+        return (dest);
 }
 /*
 #include <stdio.h>
-
+        
 int	main(void){
 	char x[]="1234";
         char y[4];
-ft_memcpy(y,x);
+ft_memmove(y,x,3);
 printf("%c",y[0]);
 printf("%c",y[1]);
 printf("%c",y[2]);

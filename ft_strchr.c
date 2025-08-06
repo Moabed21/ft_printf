@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/22 19:58:58 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/06 15:22:59 by moabed           ###   ########.fr       */
+/*   Created: 2025/08/06 19:37:26 by moabed            #+#    #+#             */
+/*   Updated: 2025/08/06 19:57:32 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int x)
+char    *ft_strchr(const char *s, int c)
 {
-	if (x >= 65 && x <= 90)
-		return (x + 32);
-	else
-		return (x);
+        char *x;
+        x = s;
+        while(*x)
+        {
+                if(*x ==  c)
+                return (x);
+                x++;
+        }
+        return (x);
 }
-/*
-int	main(void){
 
-char test[5]= "Zf09\0";
-int i= ft_strlowcase(test);
-char	x;
-x = i+ '0';
-write(1,&x,1);
-}*/
+#include <stdio.h>
+int     main(void)
+{
+        char x[] ="ahmad";
+        char *p;
+        p = ft_strchr(x,'x');
+        printf("%c %c %c",p[0], p[1],p[2]);
+}
