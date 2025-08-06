@@ -12,17 +12,17 @@
 
 int	ft_toupper(int x)
 {
-	if(x >= 97 && x <= 122)
+	if (x >= 97 && x <= 122)
 		return (x - 32);
 	else
 		return (x);
 }
 /*
-int main(void){
+int	main(void){
 
 char test[5]= "Zf09\0";
 char *i= ft_strupcase(test);
-char x;
+char	x;
 x = i+ '0';
 write(1,&x,1);
 }*/

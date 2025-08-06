@@ -25,10 +25,11 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 }
 /*
 #include <stdio.h>
-int main()
+
+int	main(void)
 {
 char a[]="Az";
 char b[]= "Azb";
-int x = ft_strncmp(a,b,3);
+int	x = ft_strncmp(a,b,3);
 printf("%d",x);
 }*/

@@ -25,15 +25,33 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (p);
 }
+
+void    *ft_memcpy(void *dest,const void *src )
+{
+	unsigned char *dest1;
+	unsigned char *src1;
+
+	dest1 = (unsigned char *)dest;
+	src1 = (unsigned char *)src;
+
+	while(*src1)
+	{
+                ft_memset(dest1,*src1,sizeof(*src));
+                src1++;
+                dest1++;
+	}
+        return (dest1);
+}
 /*
 #include <stdio.h>
 
 int	main(void){
-	int x[4];
-ft_memset(x,'a',sizeof(x));
-printf("%c",x[0]);
-printf("%c",x[1]);
-printf("%c",x[2]);
-printf("%c",x[3]);
-printf("%c",x[4]);
+	char x[]="1234";
+        char y[4];
+ft_memcpy(y,x);
+printf("%c",y[0]);
+printf("%c",y[1]);
+printf("%c",y[2]);
+printf("%c",y[3]);
+printf("%c",y[4]);
 }*/

@@ -12,21 +12,23 @@
 
 int	ft_isprint(int x)
 {
+	int	i;
+
+	i = 0;
 	if (x < 127 && x >= 32)
 		i = 1;
 	else
 	{
 		i = 0;
-		break ;
 	}
-		return (i);
-	}
+	return (i);
+}
 /*
-int main(void){
+int	main(void){
 
 char test[]= "Zf09";
 int i= ft_str_is_printable(test);
-char x;
+char	x;
 x = i+ '0';
 write(1,&x,1);
 }*/

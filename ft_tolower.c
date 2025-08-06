@@ -12,17 +12,17 @@
 
 int	ft_tolower(int x)
 {
-	if(x >= 65 && x <= 90)
+	if (x >= 65 && x <= 90)
 		return (x + 32);
 	else
 		return (x);
 }
 /*
-int main(void){
+int	main(void){
 
 char test[5]= "Zf09\0";
 int i= ft_strlowcase(test);
-char x;
+char	x;
 x = i+ '0';
 write(1,&x,1);
 }*/

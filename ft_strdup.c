@@ -43,13 +43,14 @@ char	*ft_strdup(char *src)
 
 	length = ft_strlen(src);
 	dest = malloc(sizeof(char) * length);
-	ft_strcpy (dest, src);
+	ft_strcpy(dest, src);
 	return (dest);
 }
 /*
 #include <stdio.h>
+
 int	main(void)
 {
-char *x = "string is";
+char	*x = "string is";
 printf("%s",ft_strdup(x));
 }*/
