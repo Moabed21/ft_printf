@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/06 19:37:26 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/06 20:39:25 by moabed           ###   ########.fr       */
+/*   Created: 2025/08/06 20:40:07 by moabed            #+#    #+#             */
+/*   Updated: 2025/08/06 21:32:13 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char    *ft_strchr(const char *s, int c)
+int     ft_atoi(const char *nptr)
 {
-        char x;
-        x = c;
-        while(*s)
+        int     x;
+
+        x = 0;
+        while (*nptr)
         {
-                if(*s == x)
-                return ((char *)s);
-                s++;
+                if(*nptr == ' ')
+                        nptr++;
         }
-        return ((char *)s);
+        if()
 }
-/*
+#include <stdlib.h>
 #include <stdio.h>
-int     main(void)
+int main(void)
 {
-        char x[] ="ahmad";
-        char *p;
-        p = ft_strchr(x,'m');
-        printf("%c %c %c",p[0], p[1],p[2]);
+            char x[]= "     21   54the 2e0";
+            printf("%d",ft_atoi(x));
 }
-*/
