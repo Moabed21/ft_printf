@@ -14,7 +14,7 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	while(n--)
+	while (n--)
 	{
 		*(unsigned char *)s = 0;
 		s++;
@@ -22,7 +22,7 @@ void	ft_bzero(void *s, size_t n)
 }
 /*
 #include <stdio.h>
-        
+
 int	main(void){
 	char y[]="1234";
 

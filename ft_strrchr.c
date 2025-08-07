@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/06 18:08:45 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/06 18:32:24 by moabed           ###   ########.fr       */
+/*   Created: 2025/08/07 14:31:54 by moabed            #+#    #+#             */
+/*   Updated: 2025/08/07 21:23:11 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	unsigned char	*p;
-	unsigned char	v;
+        while (*s)
+                s++;
+        s--;
+        while(*s)
+        {
+                if(*s ==(char)c)
+                {
+                        return ((char *)s);
+                }
+                else
 
-	p = (unsigned char *)s;
-	v = (unsigned char)c;
-	while (n--)
-	{
-		if (*p == v)
-		{
-			return (p);
-		}
-		p++;
-	}
-	return (p);
+                s--;
+        }
+        return (NULL);
 }
-/*
+
 #include <stdio.h>
 
 int	main(void)
 {
-		char x[] ="ahmad";
 		char *p;
-		p = ft_memchr(x,'x',5);
+
+		char x[] ="ahmad";
+		p = ft_strrchr(x,'a');
 		printf("%c %c %c",p[0], p[1],p[2]);
-}*/
+}
