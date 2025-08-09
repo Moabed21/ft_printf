@@ -6,7 +6,7 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 12:11:43 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/08 21:07:51 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/09 14:35:43 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
         p[i] = '\0';
         return(ptp);
 }
-/*
+
 #include<stdio.h>
 int main(void)
         {
@@ -44,4 +44,3 @@ int main(void)
       printf("%s",p);
     free(p);   
 }
-*/

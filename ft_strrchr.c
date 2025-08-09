@@ -6,7 +6,7 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/07 14:31:54 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/07 21:23:11 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/09 00:27:22 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strrchr(const char *s, int c)
         }
         return (NULL);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -39,3 +39,4 @@ int	main(void)
 		p = ft_strrchr(x,'a');
 		printf("%c %c %c",p[0], p[1],p[2]);
 }
+*/

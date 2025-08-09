@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/07 21:26:20 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/09 19:22:56 by moabed           ###   ########.fr       */
+/*   Created: 2025/08/09 18:55:33 by moabed            #+#    #+#             */
+/*   Updated: 2025/08/09 18:56:49 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-size_t strlcat(char *dst, const char *src, size_t size)
+void ft_putendl_fd(char *s, int fd)
 {
+        while (*s)
+        {
+                write(fd,&*s,1);
+        }
+        write(fd,"\n",1);
 
-        
 }
