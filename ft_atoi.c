@@ -17,21 +17,22 @@ int	ft_atoi(const char *nptr)
 	x = 0;
 	while (*nptr == ' ')
 	{
-			nptr++;
+		nptr++;
 	}
-	while (*nptr >= '0' && *nptr <='9')
+	while (*nptr >= '0' && *nptr <= '9')
 	{
 		x *= 10;
 		x = x + (*nptr - '0');
 		nptr++;
 	}
-	if(!(*nptr >= '0' && *nptr <='9'))
+	if (!(*nptr >= '0' && *nptr <= '9'))
 		return (x);
 	return (x);
 }
 /*
 #include <stdio.h>
 #include <stdlib.h>
+
 int	main(void)
 {
 	char x[] = "     24   54the 2e0";

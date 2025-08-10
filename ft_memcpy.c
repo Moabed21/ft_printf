@@ -6,30 +6,15 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 20:52:14 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/07 11:25:22 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/10 04:36:57 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-void	*ft_memset(void *s, int c, size_t n)
-{
-	unsigned char	*p;
-	unsigned char	v;
-
-	p = (unsigned char *)s;
-	v = (unsigned char)c;
-	while (n--)
-	{
-		*p = v;
-		p++;
-	}
-	return (p);
-}
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src)
 {
-	unsigned char	*dest1;
+	unsigned char		*dest1;
 	const unsigned char	*src1;
 
 	dest1 = (unsigned char *)dest;

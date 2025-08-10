@@ -6,14 +6,16 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 18:47:54 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/09 18:54:52 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/10 04:40:25 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    ft_putstr_fd(char *s, int fd)
+#include "libft.h"
+
+void	ft_putstr_fd(char *s, int fd)
 {
-        while (*s)
-        {
-                write(fd,&*s,1);
-        }
+	while (*s)
+	{
+		write(fd, &*s, 1);
+	}
 }

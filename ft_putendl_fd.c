@@ -6,16 +6,17 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 18:55:33 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/09 18:56:49 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/10 04:40:13 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_putendl_fd(char *s, int fd)
-{
-        while (*s)
-        {
-                write(fd,&*s,1);
-        }
-        write(fd,"\n",1);
+#include "libft.h"
 
+void	ft_putendl_fd(char *s, int fd)
+{
+	while (*s)
+	{
+		write(fd, &*s, 1);
+	}
+	write(fd, "\n", 1);
 }

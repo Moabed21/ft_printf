@@ -6,22 +6,11 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:47:19 by moabed            #+#    #+#             */
-/*   Updated: 2025/07/08 17:47:20 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/10 04:40:50 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
+#include "libft.h"
 
 void	ft_strcpy(char *dest, char *src)
 {
@@ -36,7 +25,7 @@ void	ft_strcpy(char *dest, char *src)
 	dest[i] = '\0';
 }
 
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	char	*dest;
 	int		length;

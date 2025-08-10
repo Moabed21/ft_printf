@@ -6,50 +6,38 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 21:08:26 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/08 23:36:34 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/10 04:21:10 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include "libft.h"
 
-size_t	ft_strlen(const char *str)
-{       
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-        char *totalsize;
-        char *ptr;
+	char	*totalsize;
+	char	*ptr;
 
-        totalsize = malloc((ft_strlen(s2)+ft_strlen(s1) + 1)* sizeof(char));
-        ptr = totalsize;
-        if (totalsize == NULL)
-                return( NULL);
-        while (*s1)
-        {
-                *totalsize++ = *s1++;
-        }
-        while (*s2)
-        {
-                *totalsize++ = *s2++;
-        }
-        *totalsize ='\0';
-        return (ptr);
+	totalsize = malloc((ft_strlen(s2) + ft_strlen(s1) + 1) * sizeof(char));
+	ptr = totalsize;
+	if (totalsize == NULL)
+		return (NULL);
+	while (*s1)
+	{
+		*totalsize++ = *s1++;
+	}
+	while (*s2)
+	{
+		*totalsize++ = *s2++;
+	}
+	*totalsize = '\0';
+	return (ptr);
 }
 /*
-#include<stdio.h>
-int     main(void){
-char x1[] = "the ";
-char x2[] = "last";
-char *p = ft_strjoin(x1,x2);
-        printf("%s",p);
+#include <stdio.h>
+
+int	main(void){
+char	x1[] = "the ";
+char	x2[] = "last";
+char	*p = ft_strjoin(x1,x2);
+		printf("%s",p);
 }*/

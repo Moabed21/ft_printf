@@ -6,11 +6,11 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 17:36:50 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/06 17:54:51 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/10 04:38:23 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
