@@ -1,45 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/08 17:47:19 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/11 22:52:16 by moabed           ###   ########.fr       */
+/*   Created: 2025/08/11 16:41:33 by moabed            #+#    #+#             */
+/*   Updated: 2025/08/12 11:13:45 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strcpy(char *dest, char *src)
+size_t	occurences(char const *s, char c)
 {
-	int	i;
+	size_t	counter;
 
-	i = 0;
-	while (src[i] != '\0')
+	counter = 0;
+	while (*s)
 	{
-		dest[i] = src[i];
-		i++;
+		counter++;
+		s++;
 	}
-	dest[i] = '\0';
+	return (++counter);
 }
-
-char	*ft_strdup(const char *src)
+char	**ft_split(char const *s, char c)
 {
-	char	*dest;
-	int		length;
-
-	length = ft_strlen(src);
-	dest = malloc(sizeof(char) * length);
-	ft_strcpy(dest, (char *)src);
-	return (dest);
+	return (NULL);
 }
-/*
-#include <stdio.h>
-
+/**
 int	main(void)
 {
-char	*x = "string is";
-printf("%s",ft_strdup(x));
+	ft_split("          salam                 baybars        sfdpijds              ",
+		' ');
+	return (0);
 }*/

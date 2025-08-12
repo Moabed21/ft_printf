@@ -6,7 +6,7 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 15:23:21 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/10 04:37:45 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/11 23:51:55 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		}
 	}
 	else
+	{
 		while (n--)
 		{
-			*d = *s;
-			s++;
-			d++;
+			*d++ = *s++;
 		}
+	}
 	return (dest);
 }
 /*

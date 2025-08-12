@@ -1,45 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/08 17:47:19 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/11 22:52:16 by moabed           ###   ########.fr       */
+/*   Created: 2025/08/12 16:25:03 by moabed            #+#    #+#             */
+/*   Updated: 2025/08/12 16:51:42 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strcpy(char *dest, char *src)
+size_t	strlcpy(char *dst, const char *src, size_t size)
 {
-	int	i;
+	size_t	srclen;
 
-	i = 0;
-	while (src[i] != '\0')
+	srclen = ft_strlen(src);
+	if (size == 0)
 	{
-		dest[i] = src[i];
-		i++;
+		return (srclen);
 	}
-	dest[i] = '\0';
+	size--;
+	while (size-- && *src)
+	{
+		*dst = *src;
+		dst++;
+		src++;
+	}
+	*dst = '\0';
+	return (srclen);
 }
-
-char	*ft_strdup(const char *src)
-{
-	char	*dest;
-	int		length;
-
-	length = ft_strlen(src);
-	dest = malloc(sizeof(char) * length);
-	ft_strcpy(dest, (char *)src);
-	return (dest);
-}
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-char	*x = "string is";
-printf("%s",ft_strdup(x));
-}*/
