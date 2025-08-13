@@ -6,13 +6,13 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:47:19 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/11 22:52:16 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/13 23:22:18 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_strcpy(char *dest, char *src)
+static void	ft_strcpy(char *dest, char *src)
 {
 	int	i;
 
@@ -35,11 +35,13 @@ char	*ft_strdup(const char *src)
 	ft_strcpy(dest, (char *)src);
 	return (dest);
 }
-/*
-#include <stdio.h>
 
-int	main(void)
-{
-char	*x = "string is";
-printf("%s",ft_strdup(x));
-}*/
+// #include <stdio.h>
+
+// int	main(void)
+// {
+// char	*x = "lorem ipsum dolor sit amet";
+// char *s = ft_strdup(x);
+// printf("%s\n",s);
+// free(s);
+// }

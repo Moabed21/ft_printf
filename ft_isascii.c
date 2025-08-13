@@ -6,13 +6,15 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/04 11:49:43 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/04 11:50:50 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/14 00:53:57 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	isascii(int x)
+#include "libft.h"
+
+int	ft_isascii(int x)
 {
-	if (x >= 0 && x <= 255)
+	if (x >= 0 && x <= 127)
 	{
 		return (1);
 	}

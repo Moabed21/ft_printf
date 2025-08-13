@@ -6,7 +6,7 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 23:52:22 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/12 16:23:59 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/14 00:47:40 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,19 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
+
 int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_isalnum(int x);
 int		ft_isalpha(int x);
-int		isascii(int x);
+int		ft_isascii(int x);
 int		ft_isdigit(int x);
 int		ft_isprint(int x);
 size_t	strlcat(char *dst, const char *src, size_t size);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-void	*ft_memcpy(void *dest, const void *src);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_putchar_fd(char c, int fd);
@@ -36,7 +37,7 @@ void	ft_putstr_fd(char *s, int fd);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *src);
 char	*ft_strjoin(char const *s1, char const *s2);
-size_t	strlcat(char *dst, const char *src, size_t size);
+size_t	strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *str);
 int		ft_strncmp(char *s1, char *s2, unsigned int n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);

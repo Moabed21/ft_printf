@@ -6,7 +6,7 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 12:11:43 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/11 10:41:54 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/13 16:23:41 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	p[i] = '\0';
 	return (ptp);
 }
-/*
-#include <stdio.h>
 
-int	main(void)
-{
-	char	x[] = "the last wizard ";
-	char	*p;
+// #include <stdio.h>
 
-	p = ft_substr(x, 0, 3);
-	printf("%s", p);
-	free(p);
-}*/
+// int	main(void)
+// {
+// 	char	x[] = "lorem ipsum dolor sit amet";
+// 	char	*p;
+
+// 	p = ft_substr(x, 7, 0);
+// 	printf("%s", p);
+// 	free(p);
+// }

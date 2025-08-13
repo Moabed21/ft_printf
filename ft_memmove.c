@@ -6,7 +6,7 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 15:23:21 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/11 23:51:55 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/14 01:23:06 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	const unsigned char	*s;
 	unsigned char		*d;
+	unsigned char		x;
 
 	s = (unsigned char *)src;
 	d = (unsigned char *)dest;
@@ -23,32 +24,30 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 		return (dest);
 	if (d > s && d < s + n)
 	{
-		d += n;
+		x = *s;
+		d += --n;
 		s += n;
 		while (n--)
 		{
-			*d = *s;
+			*d-- = *s--;
 		}
+		*d = x;
 	}
 	else
 	{
 		while (n--)
-		{
 			*d++ = *s++;
-		}
 	}
 	return (dest);
 }
-/*
-#include <stdio.h>
 
-int	main(void){
-	char x[]="1234";
-		//char y[4];
-ft_memmove(x+2,x,3);
-printf("%c",x[0]);
-printf("%c",x[1]);
-printf("%c",x[2]);
-printf("%c",x[3]);
-printf("%c",x[4]);
-}*/
+// #include <stdio.h>
+
+// int	main(void){
+// 	char	src[] = "lorem ipsum dolor sit amet";
+// 	char *dest;
+
+// 	dest = src+1;
+// ft_memmove(dest, src, 8);
+// printf("%s",dest);
+// }

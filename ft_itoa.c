@@ -6,7 +6,7 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 13:08:50 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/11 23:54:26 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/13 23:35:10 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,12 +76,12 @@ char	*ft_itoa(int n)
 		p[x] = '-';
 	return (flipper(p));
 }
-/*
-#include <stdio.h>
 
-int	main(void){
+// #include <stdio.h>
 
-	char *p = ft_itoa(-11);
+// int	main(void){
 
-printf("%s",p);
-}*/
+// 	char *p = ft_itoa(-2147483648LL);
+
+// printf("%s",p);
+// }

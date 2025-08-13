@@ -6,23 +6,25 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/22 19:36:01 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/06 15:23:02 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/12 17:26:57 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int x)
+#include "libft.h"
+
+int	ft_toupper(int c)
 {
-	if (x >= 97 && x <= 122)
-		return (x - 32);
+	if (c >= 97 && c <= 122)
+		return (c - 32);
 	else
-		return (x);
+		return (c);
 }
 /*
 int	main(void){
 
 char test[5]= "Zf09\0";
 char *i= ft_strupcase(test);
-char	x;
-x = i+ '0';
-write(1,&x,1);
+char	c;
+c = i+ '0';
+write(1,&c,1);
 }*/
