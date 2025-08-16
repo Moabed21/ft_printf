@@ -6,7 +6,7 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 20:02:58 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/12 17:25:19 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/14 18:56:04 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,11 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	}
 	return (0);
 }
-/*
-#include <stdio.h>
 
-int	main(void)
-{
-char a[]="Az";
-char b[]= "Azb";
-int	x = ft_strncmp(a,b,3);
-printf("%d",x);
-}*/
+// #include <stdio.h>
+
+// int	main(void)
+// {
+// int	x = ft_strncmp("test\200", "test\0", 6);
+// printf("%d",x);
+// }

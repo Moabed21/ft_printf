@@ -1,41 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/06 18:08:45 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/14 01:30:25 by moabed           ###   ########.fr       */
+/*   Created: 2025/08/09 00:26:16 by moabed            #+#    #+#             */
+/*   Updated: 2025/08/15 15:53:49 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	unsigned char	*p;
-	unsigned char	v;
+	size_t	left;
+	size_t	right;
 
-	p = (unsigned char *)s;
-	v = (unsigned char)c;
-	while (n--)
-	{
-		if (*p == v)
-		{
-			return (p);
-		}
-		p++;
-	}
-	return (NULL);
+	if (!(*s1))
+		return (NULL);
+	if (!(set))
+		return (ft_strdup(s1));
+	right = ft_strlen(s1) - 1;
+	left = 0;
+	while (s1[left] && ft_strchr(set, s1[left]))
+		left++;
+	while (s1[right] && ft_strchr(set, s1[right]))
+		right--;
+	return (ft_substr(s1, left, right - left + 1));
 }
 
 // #include <stdio.h>
 
 // int	main(void)
 // {
-// 		char x[] ="ahmad";
-// 		char *p;
-// 		p = ft_memchr(x,'x',5);
-// 		printf("%c %c %c",p[0], p[1],p[2]);
+// 	char x[] = "the last wizard ";
+// 	char y[] = "the";
+
+// 	char *p = ft_strtrim(x, y);
+// 	printf("%s", p);
+// 	free(p);
 // }

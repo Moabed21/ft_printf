@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/12 16:25:03 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/14 02:41:54 by moabed           ###   ########.fr       */
+/*   Created: 2025/08/15 15:27:03 by moabed            #+#    #+#             */
+/*   Updated: 2025/08/16 03:38:05 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+void ft_lstadd_back(t_list **lst, t_list *new)
 {
-	size_t	srclen;
-
-	srclen = ft_strlen(src);
-	if (size == 0)
-	{
-		return (srclen);
-	}
-	size--;
-	while (size-- && *src)
-	{
-		*dst = *src;
-		dst++;
-		src++;
-	}
-	*dst = '\0';
-	return (srclen);
+	
 }

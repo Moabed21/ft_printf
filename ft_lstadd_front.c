@@ -1,47 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/08 17:47:19 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/14 15:22:42 by moabed           ###   ########.fr       */
+/*   Created: 2025/08/15 12:26:56 by moabed            #+#    #+#             */
+/*   Updated: 2025/08/15 15:23:49 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_strcpy(char *dest, char *src)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	int	i;
-
-	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
+	new->next = *lst;
+	*lst = new;
 }
-
-char	*ft_strdup(const char *src)
-{
-	char	*dest;
-	int		length;
-
-	length = ft_strlen(src);
-	dest = malloc(sizeof(char) * length + 1);
-	ft_strcpy(dest, (char *)src);
-	return (dest);
-}
-
 // #include <stdio.h>
 
 // int	main(void)
 // {
-// char	*x = "lorem ipsum dolor sit amet";
-// char *s = ft_strdup(x);
-// printf("%s\n",s);
-// free(s);
+// 	t_list n1, n2, n3, *head;
+// 	int a = 42, *x = &a;
+// 	n1.content = (int *)x;
+// 	n1.next = &n2;
+// 	n2.content = (int *)20;
+// 	n2.next = &n3;
+// 	n3.content = (int *)10;
+// 	n3.next = NULL;
+// 	head = &n1;
+// 	//printf("%d ",*(int *)head->next->next);
 // }

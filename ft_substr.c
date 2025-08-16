@@ -6,7 +6,7 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 12:11:43 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/13 16:23:41 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/15 00:33:03 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (p);
 	}
 	ptp = p;
-	while (i < len)
+	while (i < len && *s)
 	{
-		*p++ = *s++;
+		p[i] = s[i];
 		i++;
 	}
 	p[i] = '\0';
@@ -42,7 +42,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // 	char	x[] = "lorem ipsum dolor sit amet";
 // 	char	*p;
 
-// 	p = ft_substr(x, 7, 0);
+// 	p = ft_substr(x, 0, 10);
 // 	printf("%s", p);
 // 	free(p);
 // }

@@ -1,47 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/08 17:47:19 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/14 15:22:42 by moabed           ###   ########.fr       */
+/*   Created: 2025/08/09 18:57:26 by moabed            #+#    #+#             */
+/*   Updated: 2025/08/15 00:13:57 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_strcpy(char *dest, char *src)
+void	ft_putnbr_fd(int nb, int fd)
 {
-	int	i;
+	char	x;
 
-	i = 0;
-	while (src[i] != '\0')
+	if (nb == -2147483648)
+		write(fd, "-2147483648", 11);
+	else if (nb < 0)
 	{
-		dest[i] = src[i];
-		i++;
+		write(fd, "-", 1);
+		ft_putnbr_fd(nb *= -1, fd);
 	}
-	dest[i] = '\0';
+	else if (nb <= 9)
+	{
+		x = nb + '0';
+		write(fd, &x, 1);
+		return ;
+	}
+	else if (nb > 9)
+	{
+		x = (nb % 10) + '0';
+		ft_putnbr_fd(nb /= 10, fd);
+		write(fd, &x, 1);
+	}
 }
-
-char	*ft_strdup(const char *src)
-{
-	char	*dest;
-	int		length;
-
-	length = ft_strlen(src);
-	dest = malloc(sizeof(char) * length + 1);
-	ft_strcpy(dest, (char *)src);
-	return (dest);
-}
-
-// #include <stdio.h>
 
 // int	main(void)
 // {
-// char	*x = "lorem ipsum dolor sit amet";
-// char *s = ft_strdup(x);
-// printf("%s\n",s);
-// free(s);
+// 	ft_putnbr_fd(-987441, 2);
 // }

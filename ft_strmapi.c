@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/12 16:25:03 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/14 02:41:54 by moabed           ###   ########.fr       */
+/*   Created: 2025/08/14 19:25:36 by moabed            #+#    #+#             */
+/*   Updated: 2025/08/14 23:49:00 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t	srclen;
+	char	*p;
+	size_t	i;
 
-	srclen = ft_strlen(src);
-	if (size == 0)
+	p = malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (p == NULL)
+		return (p);
+	i = 0;
+	while (s[i])
 	{
-		return (srclen);
+		p[i] = f(i, s[i]);
+		i++;
 	}
-	size--;
-	while (size-- && *src)
-	{
-		*dst = *src;
-		dst++;
-		src++;
-	}
-	*dst = '\0';
-	return (srclen);
+	p[i] = '\0';
+	return (p);
 }
+/*a major difference is here in the loop we
+want the value but in iteri fun. we want the address of it*/

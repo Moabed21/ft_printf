@@ -6,7 +6,7 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 13:08:50 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/13 23:35:10 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/14 17:52:41 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,15 +65,18 @@ char	*ft_itoa(int n)
 	isnegative = ft_isnegative(n);
 	if (isnegative)
 		n *= -1;
-	p = malloc(sizeof(char) * sizecal(n) + sizeof(char) * isnegative);
+	p = malloc(sizeof(char) * sizecal(n) + sizeof(char) * isnegative + 1);
 	while (n)
 	{
-		p[x] = (n % 10) + '0';
+		p[x++] = (n % 10) + '0';
 		n /= 10;
-		x++;
 	}
 	if (isnegative)
+	{
 		p[x] = '-';
+		x++;
+	}
+	p[x] = '\0';
 	return (flipper(p));
 }
 
@@ -81,7 +84,7 @@ char	*ft_itoa(int n)
 
 // int	main(void){
 
-// 	char *p = ft_itoa(-2147483648LL);
+// 	//char *p = ft_itoa(-2147483647);
 
-// printf("%s",p);
+// printf("%d",sizecal(-100));
 // }
