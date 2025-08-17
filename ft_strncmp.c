@@ -6,7 +6,7 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/25 20:02:58 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/14 18:56:04 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/16 13:36:30 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,12 @@ int	ft_strncmp(char *s1, char *s2, unsigned int n)
 	unsigned int	i;
 
 	i = 0;
-	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
+	while (i < n)
 	{
-		if (!(s1[i] - s2[i] == 0))
-			return (s1[i] - s2[i]);
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		if (s1[i] == '\0')
+			return (0);
 		i++;
 	}
 	return (0);

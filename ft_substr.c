@@ -6,7 +6,7 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/08 12:11:43 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/15 00:33:03 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/16 13:31:15 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*ptp;
 	size_t	i;
 
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
 	i = 0;
 	s += start;
 	p = malloc(len + 1);
 	if (p == NULL)
-	{
 		return (p);
-	}
 	ptp = p;
 	while (i < len && *s)
 	{

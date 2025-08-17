@@ -6,7 +6,7 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/07 14:31:54 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/12 17:25:25 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/16 18:03:35 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
+	char	*p;
+
+	p = (char *)s;
 	while (*s)
 		s++;
-	s--;
-	while (*s)
+	while (s >= p)
 	{
 		if (*s == (char)c)
 		{

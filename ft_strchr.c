@@ -6,7 +6,7 @@
 /*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 19:37:26 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/12 17:24:47 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/17 01:25:05 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,25 @@ char	*ft_strchr(const char *s, int c)
 {
 	char	x;
 
-	x = c;
+	x = (char)c;
 	while (*s)
 	{
 		if (*s == x)
 			return ((char *)s);
 		s++;
 	}
-	return ((char *)s);
+	if (x == '\0')
+		return ((char *)s);
+	return (NULL);
 }
-/*
-#include <stdio.h>
 
-int	main(void)
-{
-		char *p;
+// #include <stdio.h>
 
-		char x[] ="ahmad";
-		p = ft_strchr(x,'m');
-		printf("%c %c %c",p[0], p[1],p[2]);
-}
-*/
+// int	main(void)
+// {
+// 		char *p;
+
+// 		char x[] ="ahmad";
+// 		p = ft_strchr(x,'m');
+// 		printf("%c %c %c",p[0], p[1],ft_strlen(x));
+// }
