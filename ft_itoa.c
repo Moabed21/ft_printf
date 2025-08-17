@@ -66,7 +66,7 @@ char	*ft_itoa(int n)
 	if (isnegative)
 		n *= -1;
 	p = malloc(sizeof(char) * sizecal(n) + sizeof(char) * isnegative + 1);
-	if(p == NULL)
+	if (p == NULL)
 		return (NULL);
 	while (n)
 	{

@@ -62,18 +62,18 @@ static char	**splitted_arrf(char *sentence, char seperator, int wordscount,
 		if (*sentence != seperator)
 		{
 			len = wordlen(sentence, seperator);
-			*splitted_arr = malloc(sizeof(char) *(wordscount+ 1));
+			*splitted_arr = malloc(sizeof(char) * (wordscount + 1));
 			if (!(*splitted_arr))
 			{
 				freefun(splitted_arr);
 				return (NULL);
 			}
-			*splitted_arr = strchr(sentence,seperator);
-			sentence+=len;
+			*splitted_arr = strchr(sentence, seperator);
+			sentence += len;
 		}
 		wordscount--;
 	}
-	return(splitted_arr);
+	return (splitted_arr);
 }
 
 char	**ft_split(const char *s, char c)
