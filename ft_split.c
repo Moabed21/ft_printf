@@ -6,7 +6,7 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 14:41:57 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/17 17:14:04 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/17 20:09:24 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,21 +55,16 @@ static char	**splitted_arrf(char *sentence, char seperator, int wordscount,
 		char **splitted_arr)
 {
 	int	len;
-
-	while (*sentence && wordscount)
+	int	i;
+	
+	i = 0;
+	while (sentence[i] && wordscount)
 	{
 		len = 0;
-		if (*sentence != seperator)
+		if (sentence[i] != seperator)
 		{
-			len = wordlen(sentence, seperator);
-			*splitted_arr = malloc(sizeof(char) * (wordscount + 1));
-			if (!(*splitted_arr))
-			{
-				freefun(splitted_arr);
-				return (NULL);
-			}
-			*splitted_arr = strchr(sentence, seperator);
-			sentence += len;
+			
+			len++;
 		}
 		wordscount--;
 	}
@@ -83,7 +78,7 @@ char	**ft_split(const char *s, char c)
 
 	wc = countwords(s, c);
 	splitted_arr = malloc(sizeof(char *) * (wc + 1));
-	return (splitted_arrf(s, c, wc, splitted_arr));
+	return (splitted_arrf((char *)s, c, wc, splitted_arr));
 }
 #include <stdio.h>
 

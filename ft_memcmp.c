@@ -6,7 +6,7 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/06 18:39:04 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/17 18:08:46 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/17 18:55:30 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 	p = (unsigned char *)s1;
 	v = (unsigned char *)s2;
-	if (!(p) && !(v))
+	if (n == 0)
 		return (0);
-	while ((*v || *p) && n--)
+	while (n--)
 	{
 		if (*p - *v != 0)
 			return (*p - *v);
