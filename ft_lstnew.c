@@ -6,7 +6,7 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/15 00:46:50 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/17 17:14:04 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/17 17:34:17 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_list	*ft_lstnew(void *content)
 	t_list	*p;
 
 	p = malloc(sizeof(t_list));
+	if(!(p))
+		return (NULL);
 	p->content = content;
 	p->next = NULL;
 	return (p);

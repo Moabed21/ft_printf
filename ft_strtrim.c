@@ -6,7 +6,7 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/09 00:26:16 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/17 17:14:04 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/17 17:39:05 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	left;
 	size_t	right;
 
-	if (!(*s1))
+	if (!(s1))
 		return (NULL);
 	if (!(set))
 		return (ft_strdup(s1));

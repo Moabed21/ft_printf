@@ -6,7 +6,7 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/07 21:26:20 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/17 17:14:04 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/17 18:05:01 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,22 @@
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	dstsize;
-	size_t	srclen;
-
-	srclen = ft_strlen(src);
+	size_t	srcsize;
+	size_t	i;
+	srcsize = ft_strlen(src);
 	dstsize = ft_strlen(dst);
-	if (size <= dstsize)
+	if(size == 0)
+		return (srcsize);
+	if(dstsize >= size)
+		return(size + srcsize);
+	i = 0;
+	while(i < srcsize && (dstsize + i) < (dstsize -1))
 	{
-		return (size + srclen);
+		dst[dstsize + i] = src[i];
+		i++;
 	}
-	else
-	{
-		dst += dstsize;
-		while (size - dstsize - 1 && *src != '\0')
-		{
-			*dst = *src;
-			dst++;
-			src++;
-		}
-		*dst = '\0';
-		return (dstsize + srclen);
-	}
+	dst[dstsize + i] = '\0';
+	return(dstsize + srcsize);
 }
 /*
 size is the expected size of the dst we have sent , in reality ,
