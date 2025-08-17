@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/08 17:47:19 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/14 15:22:42 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/17 17:26:24 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ char	*ft_strdup(const char *src)
 
 	length = ft_strlen(src);
 	dest = malloc(sizeof(char) * length + 1);
+	if(dest == NULL)
+		return (NULL);
 	ft_strcpy(dest, (char *)src);
 	return (dest);
 }

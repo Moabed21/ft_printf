@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 20:52:14 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/13 17:02:34 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/17 17:25:13 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	dest1 = (unsigned char *)dest;
 	src1 = (unsigned char *)src;
+	if (!(dest1) && !(src1))
+		return (NULL);
 	while (n--)
 	{
 		*dest1++ = *src1++;

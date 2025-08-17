@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 19:25:36 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/14 23:49:00 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/17 17:14:04 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t	i;
 
 	p = malloc((ft_strlen(s) + 1) * sizeof(char));
-	if (p == NULL)
-		return (p);
+	if (!(*p))
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{

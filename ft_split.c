@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: moabed <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 14:41:57 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/17 12:56:38 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/17 17:14:04 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,9 +56,9 @@ static char	**splitted_arrf(char *sentence, char seperator, int wordscount,
 {
 	int	len;
 
-	len = 0;
 	while (*sentence && wordscount)
 	{
+		len = 0;
 		if (*sentence != seperator)
 		{
 			len = wordlen(sentence, seperator);
