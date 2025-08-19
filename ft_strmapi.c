@@ -6,7 +6,7 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/14 19:25:36 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/17 17:40:37 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/19 21:17:22 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,12 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	p[i] = '\0';
 	return (p);
 }
-/*a major difference is here in the loop we
-want the value but in iteri fun. we want the address of it*/
+
+// char f(unsigned int a , char b)
+// {
+// }
+// a major difference is here in the loop we
+// want the value but in iteri fun. we want the address of it
+// int	main(void)
+// {
+// }

@@ -14,11 +14,10 @@ SRC =		ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c \
 OBJ = 		$(SRC:.c=.o)
 BONUS =		ft_lstnew_bonus.c  ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c 
 BONUS_OBJ =	$(BONUS:.c=.o)
+all	:	$(NAME)
 
 bonus	:	$(OBJ) $(BONUS_OBJ)
 		ar rcs $(NAME) $(OBJ) $(BONUS_OBJ)
-
-all	:	$(NAME)
 
 $(NAME)	:	$(OBJ)
 		ar rcs $(NAME) $(OBJ)

@@ -6,7 +6,7 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 20:52:14 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/17 17:25:13 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/19 21:08:45 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 
 	dest1 = (unsigned char *)dest;
 	src1 = (unsigned char *)src;
-	if (!(dest1) && !(src1))
-		return (NULL);
 	while (n--)
 	{
 		*dest1++ = *src1++;
