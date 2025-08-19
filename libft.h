@@ -6,7 +6,7 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/11 23:52:22 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/19 21:20:52 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/19 21:55:06 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ void		ft_putstr_fd(char *s, int fd);
 int			ft_atoi(const char *nptr);
 int			ft_tolower(int x);
 int			ft_toupper(int x);
-int			t_isalnum(int x);
-int			t_isalpha(int x);
-int			t_isascii(int x);
-int			isdigit(int x);
+int			ft_isalnum(int x);
+int			ft_isalpha(int x);
+int			ft_isascii(int x);
+int			ft_isdigit(int x);
 int			ft_isprint(int x);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 int			ft_strncmp(char *s1, char *s2, unsigned int n);
