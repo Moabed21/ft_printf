@@ -6,8 +6,17 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 15:16:27 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/23 15:16:54 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/24 19:06:05 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+
+void	ft_printstr(char *p)
+{
+	while (*p)
+	{
+		write(1, p, 1);
+		p++;
+	}
+}

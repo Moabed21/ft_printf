@@ -6,8 +6,13 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 15:16:35 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/23 15:16:50 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/24 23:08:37 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+
+void ft_printptr(void *p)
+{
+
+}

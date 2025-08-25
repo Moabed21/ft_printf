@@ -6,12 +6,16 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 15:16:21 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/23 20:58:19 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/24 19:06:51 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
+void	ft_printchar(char x)
+{
+	write(1, &x, 1);
+}
 // int sum(int count, ...)
 // {
 // 	va_list args;
@@ -30,5 +34,5 @@
 // }
 // int	main(void)
 // {
-// 	printf("%d ", sum(3,1,2,3));
+// 	printf("%d ", sum(2,1,2,3));
 // }
