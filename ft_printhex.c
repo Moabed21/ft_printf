@@ -6,33 +6,19 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 15:16:31 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/25 15:52:43 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/26 10:48:43 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
+char	hexfinder(char x)
+{
+	char hex[16];
+}
+
 void	ft_printhex(int nb)
 {
-	char	x;
+	char hex[16];
 
-	if (nb == -2147483648)
-		write(1, "-2147483648", 11);
-	else if (nb < 0)
-	{
-		write(1, "-", 1);
-		ft_putnbr_fd(nb *= -1, 1);
-	}
-	else if (nb <= 9)
-	{
-		x = nb + '0';
-		write(1, &x, 1);
-		return ;
-	}
-	else if (nb > 9)
-	{
-		x = (nb % 16) + '0';
-		ft_putnbr_fd(nb /= 16, 1);
-		write(1, &x, 1);
-	}
 }
