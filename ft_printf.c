@@ -6,7 +6,7 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 08:38:52 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/25 16:48:27 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/27 22:54:03 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,11 @@ static void	typesearcher(va_list args, char type)
 	if (type == 'd')
 		ft_printnbr(va_arg(args, int));
 	if (type == 'p')
-		ft_printptr(va_arg(args, int));
-	
-
+		ft_printhex(va_arg(args, int));
+	if (type == 'X')
+		ft_printhex(va_arg(args, int));
+	if (type == 'x')
+		ft_printshex(va_arg(args, int));
 }
 
 int	ft_printf(const char *s, ...)
@@ -38,7 +40,7 @@ int	ft_printf(const char *s, ...)
 	while (*s)
 	{
 		if (*s == '%' && *(s + 1) == '%')
-			write(1, "%",1);
+			write(1, "%", 1);
 		else if (*s != '%')
 			write(1, s, 1);
 		else if (*s == '%')

@@ -12,7 +12,6 @@
 
 #include "libftprintf.h"
 
-void ft_printptr(void *p)
+void	ft_printptr(void *p)
 {
-
 }

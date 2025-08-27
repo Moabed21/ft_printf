@@ -6,7 +6,7 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 08:38:57 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/25 16:24:46 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/27 22:48:37 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ void	ft_printchar(char x);
 void	ft_printstr(char *p);
 void	ft_printnbr(int nb);
 void	ft_printhex(int nb);
+void	ft_printshex(int nb);
 
 #endif
