@@ -6,11 +6,11 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 08:38:52 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/28 20:27:10 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/28 21:10:50 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 static void	typesearcher(va_list *args, char type, int *ssize)
 {

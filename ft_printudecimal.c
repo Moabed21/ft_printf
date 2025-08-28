@@ -6,11 +6,11 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 15:16:37 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/28 16:03:00 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/28 21:12:09 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printudecimal(unsigned int nb)
 {

@@ -6,11 +6,11 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 15:16:31 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/28 11:48:07 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/28 21:10:58 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 static void	hexfinder(int x)
 {

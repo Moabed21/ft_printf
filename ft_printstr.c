@@ -6,11 +6,11 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 15:16:27 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/28 15:32:25 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/28 21:11:58 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printstr(char *p)
 {
