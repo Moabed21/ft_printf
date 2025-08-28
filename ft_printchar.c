@@ -6,15 +6,15 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 15:16:21 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/24 19:06:51 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/28 11:06:14 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_printchar(char x)
+int	ft_printchar(char x)
 {
-	write(1, &x, 1);
+	return(write(1, &x, 1));
 }
 // int sum(int count, ...)
 // {

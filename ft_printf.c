@@ -6,16 +6,16 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 08:38:52 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/27 22:54:03 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/28 11:05:53 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static void	typesearcher(va_list args, char type)
+static void	typesearcher(va_list args, char type, int ssize)
 {
 	if (type == 'c')
-		ft_printchar(va_arg(args, char));
+		ssize += ft_printchar(va_arg(args, char));
 	if (type == 's')
 		ft_printstr(va_arg(args, char *));
 	if (type == 'i')
@@ -39,13 +39,16 @@ int	ft_printf(const char *s, ...)
 	ssize = 0;
 	while (*s)
 	{
-		if (*s == '%' && *(s + 1) == '%')
-			write(1, "%", 1);
-		else if (*s != '%')
-			write(1, s, 1);
-		else if (*s == '%')
-			typesearcher(args, *s);
-		ssize++;
+		if(*s == '%')
+		{
+			s++;
+			if(*s == '%')
+				write(1, '%', 1);
+			else
+				typesearcher(&args,*s, &ssize);
+		}
+		else
+			ssize += write(1, s, 1);
 	}
 	va_end(args);
 	return (ssize);
