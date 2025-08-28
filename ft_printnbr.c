@@ -14,8 +14,8 @@
 
 int	ft_printnbr(int nb)
 {
-	char x;
-	int	count;
+	char	x;
+	int		count;
 
 	count = 0;
 	if (nb == -2147483648)

@@ -15,10 +15,10 @@
 int	ft_printudecimal(unsigned int nb)
 {
 	char x;
-	int	count;
+	int count;
 
 	count = 0;
-	
+
 	if (nb >= 10)
 	{
 		count += ft_printunbr(nb / 10);

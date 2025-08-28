@@ -14,14 +14,14 @@
 
 int	ft_printstr(char *p)
 {
-	int	count;
+	int count;
 
 	count = 0;
 	while (*p)
 	{
 		write(1, p, 1);
 		p++;
-		count ++;
+		count++;
 	}
 	return (count);
 }

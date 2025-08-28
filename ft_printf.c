@@ -6,7 +6,7 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 08:38:52 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/28 13:08:06 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/28 14:06:58 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ static void	typesearcher(va_list *args, char type, int *ssize)
 		*ssize += ft_printshex(va_arg(*args, unsigned int));
 	if (type == 'u')
 		*ssize += ft_printudecimal(va_arg(*args, unsigned int));
-
+	if (type == 'p')
+		*ssize += ft_printudecimal(va_arg(*args, void *));
 }
 
 int	ft_printf(const char *s, ...)
@@ -38,15 +39,15 @@ int	ft_printf(const char *s, ...)
 	ssize = 0;
 	while (*s)
 	{
-		if(*s == '%')
+		if (*s == '%')
 		{
 			s++;
-			if(*s == '%')
+			if (*s == '%')
 			{
 				ssize += write(1, "%", 1);
 			}
 			else
-				typesearcher(&args,*s, &ssize);
+				typesearcher(&args, *s, &ssize);
 		}
 		else
 			ssize += write(1, s, 1);
@@ -55,4 +56,3 @@ int	ft_printf(const char *s, ...)
 	va_end(args);
 	return (ssize);
 }
-

@@ -6,12 +6,60 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 15:16:35 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/24 23:08:37 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/28 14:30:06 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	ft_printptr(void *p)
+static void	hexfinder(unsigned long x)
 {
+	char	y;
+
+	if (x >= 0 && x <= 9)
+	{
+		y = x + '0';
+		write(1, &y, 1);
+	}
+	if (x == 10)
+		write(1, "a", 1);
+	if (x == 11)
+		write(1, "b", 1);
+	if (x == 12)
+		write(1, "c", 1);
+	if (x == 13)
+		write(1, "d", 1);
+	if (x == 14)
+		write(1, "e", 1);
+	if (x == 15)
+		write(1, "f", 1);
+}
+
+static int	printaddr(unsigned long nb)
+{
+	int count;
+
+	count = 0;
+	if (nb >= 16)
+		count += printaddr(nb / 16);
+	hexfinder(nb % 16);
+	return (count + 1);
+}
+int	ft_printptr(void *p)
+{
+	unsigned long address;
+	int	count;
+
+	count = 0;
+	address = (unsigned long)p;
+	if (address == 0)
+	{
+		count += write(1, "(nil)", 5);
+	}
+	else
+	{
+		count += write(1, "0x", 2);
+		count += printaddr(address);
+	}
+	return (count);
 }

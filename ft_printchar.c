@@ -14,7 +14,7 @@
 
 int	ft_printchar(char x)
 {
-	return(write(1, &x, 1));
+	return (write(1, &x, 1));
 }
 // int sum(int count, ...)
 // {

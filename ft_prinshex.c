@@ -6,13 +6,13 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 22:47:57 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/28 11:47:33 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/28 14:21:14 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-void	hexfinder(int x)
+static void	hexfinder(int x)
 {
 	char	y;
 
@@ -37,7 +37,7 @@ void	hexfinder(int x)
 
 int	ft_printshex(unsigned int nb)
 {
-	int	count;
+	int count;
 
 	count = 0;
 	if (nb >= 16)
