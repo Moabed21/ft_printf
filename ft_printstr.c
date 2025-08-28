@@ -6,7 +6,7 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 15:16:27 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/28 11:08:58 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/28 15:32:25 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_printstr(char *p)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	while (*p)

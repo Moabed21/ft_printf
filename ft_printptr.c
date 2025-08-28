@@ -6,7 +6,7 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 15:16:35 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/28 14:30:06 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/28 16:02:37 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	hexfinder(unsigned long x)
 {
 	char	y;
 
-	if (x >= 0 && x <= 9)
+	if (x <= 9)
 	{
 		y = x + '0';
 		write(1, &y, 1);
@@ -37,7 +37,7 @@ static void	hexfinder(unsigned long x)
 
 static int	printaddr(unsigned long nb)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	if (nb >= 16)
@@ -45,10 +45,11 @@ static int	printaddr(unsigned long nb)
 	hexfinder(nb % 16);
 	return (count + 1);
 }
+
 int	ft_printptr(void *p)
 {
-	unsigned long address;
-	int	count;
+	unsigned long	address;
+	int				count;
 
 	count = 0;
 	address = (unsigned long)p;

@@ -6,12 +6,12 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 08:38:57 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/28 14:08:06 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/28 14:35:20 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTHEADER_H
-# define LIBFTHEADER_H
+#ifndef LIBFTPRINTF_H
+# define LIBFTPRINTF_H
 
 # include <stdarg.h>
 # include <stdio.h>
@@ -25,6 +25,5 @@ int	ft_printhex(unsigned int nb);
 int	ft_printshex(unsigned int nb);
 int	ft_printudecimal(unsigned int nb);
 int	ft_printptr(void *p);
-
 
 #endif

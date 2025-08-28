@@ -6,7 +6,7 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 15:16:17 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/28 11:29:38 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/28 15:57:45 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_printnbr(int nb)
 	else if (nb < 0)
 	{
 		count += write(1, "-", 1);
-		count += ft_printnbr(nb *= -1);
+		count += ft_printnbr(-nb);
 	}
 	else if (nb <= 9)
 	{
@@ -34,7 +34,8 @@ int	ft_printnbr(int nb)
 	else if (nb > 9)
 	{
 		x = (nb % 10) + '0';
-		count += ft_printnbr(nb /= 10);
+		nb /= 10;
+		count += ft_printnbr(nb);
 		count += write(1, &x, 1);
 	}
 	return (count);

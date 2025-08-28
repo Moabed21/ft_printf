@@ -6,7 +6,7 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 08:38:52 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/28 14:06:58 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/28 16:15:15 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static void	typesearcher(va_list *args, char type, int *ssize)
 	if (type == 'u')
 		*ssize += ft_printudecimal(va_arg(*args, unsigned int));
 	if (type == 'p')
-		*ssize += ft_printudecimal(va_arg(*args, void *));
+		*ssize += ft_printptr(va_arg(*args, void *));
 }
 
 int	ft_printf(const char *s, ...)
@@ -37,6 +37,8 @@ int	ft_printf(const char *s, ...)
 
 	va_start(args, s);
 	ssize = 0;
+	if (!s)
+		return (-1);
 	while (*s)
 	{
 		if (*s == '%')
