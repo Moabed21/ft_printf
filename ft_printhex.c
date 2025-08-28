@@ -6,7 +6,7 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/23 15:16:31 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/27 22:31:55 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/28 11:48:07 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,13 @@ static void	hexfinder(int x)
 		write(1, "F", 1);
 }
 
-void	ft_printhex(int nb)
+int	ft_printhex(unsigned int nb)
 {
-	if (nb == 0)
-		return ;
-	ft_printhex(nb / 16);
+	int	count;
+
+	count = 0;
+	if (nb >= 16)
+		count += ft_printhex(nb / 16);
 	hexfinder(nb % 16);
+	return (count + 1);
 }

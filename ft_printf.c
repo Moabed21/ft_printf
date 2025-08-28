@@ -6,28 +6,25 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 08:38:52 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/28 11:30:10 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/28 11:57:28 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-static void	typesearcher(va_list args, char type, int ssize)
+static void	typesearcher(va_list *args, char type, int *ssize)
 {
 	if (type == 'c')
-		ssize += ft_printchar(va_arg(args, char));
+		*ssize += ft_printchar(va_arg(*args, int));
 	if (type == 's')
-		ssize += ft_printstr(va_arg(args, char *));
-	if (type == 'i')
-		ssize += ft_printnbr(va_arg(args, int));
-	if (type == 'd')
-		ssize += ft_printnbr(va_arg(args, int));
-	if (type == 'p')
-		ft_printhex(va_arg(args, int));
+		*ssize += ft_printstr(va_arg(*args, char *));
+	if (type == 'i' || type == 'd')
+		*ssize += ft_printnbr(va_arg(*args, int));
 	if (type == 'X')
-		ft_printhex(va_arg(args, int));
+		*ssize += ft_printhex(va_arg(*args, unsigned int));
 	if (type == 'x')
-		ft_printshex(va_arg(args, int));
+		*ssize += ft_printshex(va_arg(*args, unsigned int));
+
 }
 
 int	ft_printf(const char *s, ...)
@@ -43,17 +40,17 @@ int	ft_printf(const char *s, ...)
 		{
 			s++;
 			if(*s == '%')
-				write(1, '%', 1);
+			{
+				ssize += write(1, "%", 1);
+			}
 			else
 				typesearcher(&args,*s, &ssize);
 		}
 		else
 			ssize += write(1, s, 1);
+		s++;
 	}
 	va_end(args);
 	return (ssize);
 }
 
-int	main(void)
-{
-}
