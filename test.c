@@ -1,41 +1,38 @@
 #include "libftprintf.h"
 
-void	hexfinder(int x)
+int	ft_printnbr(int nb)
 {
-	char	y;
+	char x;
+	int	count;
 
-	if (x >= 0 && x <= 9)
+	count = 0;
+	if (nb == -2147483648)
+		return (write(1, "-2147483648", 11));
+	else if (nb < 0)
 	{
-		y = x + '0';
-		write(1, &y, 1);
+		count += write(1, "-", 1);
+		count += ft_printnbr(nb *= -1);
 	}
-	if (x == 10)
-		write(1, "a", 1);
-	if (x == 11)
-		write(1, "b", 1);
-	if (x == 12)
-		write(1, "c", 1);
-	if (x == 13)
-		write(1, "d", 1);
-	if (x == 14)
-		write(1, "e", 1);
-	if (x == 15)
-		write(1, "f", 1);
-}
-
-void	ft_printhex(int nb)
-{
-	if (nb == 0)
-		return ;
-	ft_printhex(nb / 16);
-	hexfinder(nb % 16);
+	else if (nb <= 9)
+	{
+		x = nb + '0';
+		count += write(1, &x, 1);
+		return (1);
+	}
+	else if (nb > 9)
+	{
+		x = (nb % 10) + '0';
+		count += ft_printnbr(nb /= 10);
+		count += write(1, &x, 1);
+	}
+	return (count);
 }
 
 int	main(void)
 {
-	int hexValue = 0x9a001;
+	int hexValue = 988765;
 	// Storing the hexadecimal value 1A (decimal 26) in an integer variable
-	 ft_printhex(hexValue);
-	//printf(" %X ", hexValue);
+	// ft_printnbr(hexValue);
+	printf(" %d \n", ft_printnbr(hexValue));
 	return (0);
 }
