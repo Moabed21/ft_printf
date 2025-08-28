@@ -6,7 +6,7 @@
 /*   By: moabed <moabed@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/22 08:38:52 by moabed            #+#    #+#             */
-/*   Updated: 2025/08/28 11:05:53 by moabed           ###   ########.fr       */
+/*   Updated: 2025/08/28 11:08:20 by moabed           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ static void	typesearcher(va_list args, char type, int ssize)
 	if (type == 'c')
 		ssize += ft_printchar(va_arg(args, char));
 	if (type == 's')
-		ft_printstr(va_arg(args, char *));
+		ssize += ft_printstr(va_arg(args, char *));
 	if (type == 'i')
-		ft_printnbr(va_arg(args, int));
+		ssize += ft_printnbr(va_arg(args, int));
 	if (type == 'd')
 		ft_printnbr(va_arg(args, int));
 	if (type == 'p')
