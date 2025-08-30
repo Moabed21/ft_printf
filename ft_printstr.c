@@ -17,11 +17,18 @@ int	ft_printstr(char *p)
 	int	count;
 
 	count = 0;
-	while (*p)
+	if (!p)
 	{
-		write(1, p, 1);
-		p++;
-		count++;
+		count += write(1, "(null)", 6);
+	}
+	else
+	{
+		while (*p)
+		{
+			write(1, p, 1);
+			p++;
+			count++;
+		}
 	}
 	return (count);
 }
